@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-2y&uxb04!-n)ie*62r=u3%e406@%2r3pmqrh^6q!=2n^1f3o2b
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -77,9 +77,12 @@ WSGI_APPLICATION = 'jiltechProject.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "jiltech",
+        "USER": "postgres",
+        "PASSWORD": "1234",
+        "PORT": "5432",
     }
 }
 
